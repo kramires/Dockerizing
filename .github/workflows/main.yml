@@ -23,11 +23,11 @@ jobs:
 
       - name: Build Eureka Naming Server Container Image
         working-directory: ./10-naming-server
-        run: mvn spring-boot:build-image -DskipTests
+        run: mvn spring-boot:run -DskipTests
 
       - name: Build API Gateway Container Image
         working-directory: ./10-api-gateway
-        run: mvn spring-boot:build-image -DskipTests
+        run: mvn spring-boot:run -DskipTests
 
       - name: Build Cambio Microservice Jar
         working-directory: ./10-cambio-service
